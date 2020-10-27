@@ -107,6 +107,7 @@ func robotMainLoop(piProcessor *raspi.Adaptor, gopigo3 *g.Driver, lidarSensor *i
 			if err != nil {
 				fmt.Errorf("Error moving forward %+v", err)
 			}
+			time.Sleep(time.Second)
 			turn(gopigo3)
 			time.Sleep(time.Second)
 			turned = true
